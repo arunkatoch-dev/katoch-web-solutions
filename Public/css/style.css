@@ -396,7 +396,7 @@ main .projects_section .projects_container .projects {
   border-radius: 1rem;
   margin: 2rem;
 }
-main .projects_section .projects_container .projects a img {
+main .projects_section .projects_container .projects img {
   width: 100%;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
