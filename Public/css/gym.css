@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Raleway&family=Satisfy&family=Tajawal&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Baloo Bhai 2", cursive;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background: url("../Images/abs-girl.jpg");
+  background-repeat: no-repeat;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .left {
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+header .left span {
+  font-size: 2rem;
+  font-family: Raleway, sans-serif;
+}
+header .right {
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+}
+.navmenus {
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+}
+.dumbell-image {
+  filter: invert(100%);
+}
+.navmenus:hover {
+  color: goldenrod;
+}
+.btn {
+  margin: 0px 0.5rem;
+  padding: 0.9rem;
+  color: white;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.864);
+  font-size: 1.8rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-family: "Baloo Bhai 2", cursive;
+}
+.btn:hover {
+  background-color: brown;
+}
+
+body form {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 0.2rem solid white;
+  border-radius: 1.5rem;
+  position: absolute;
+  top: 30%;
+  left: 4%;
+}
+body form h1 {
+  text-align: left;
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+
+body form input {
+  margin: 0.5rem 0;
+  width: 80%;
+  height: 3rem;
+  border: 0.1rem solid rgb(106, 103, 103);
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+.bottom-buttons {
+  display: flex;
+  width: 100%;
+  padding: 1.5rem 0;
+  gap: 1rem;
+  align-items: right;
+  justify-content: right;
+}
+.bottom-buttons :last-child {
+  margin-right: 5rem;
+}
+
+.bottom-buttons button {
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  color: white;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.864);
+  border-radius: 1rem;
+  cursor: pointer;
+  font-family: "Baloo Bhai 2", cursive;
+}
+.bottom-buttons button:hover {
+  background-color: brown;
+}
+
+@media (max-width: 936px) {
+  html {
+    font-size: 55.2%;
+  }
+}
+@media (max-width: 823px) {
+  html {
+    font-size: 45.2%;
+  }
+  body form {
+    width: 85%;
+  }
+}
+
+@media (max-width: 636px) {
+  html {
+    font-size: 40%;
+  }
+  header {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 40%;
+  }
+  /* body form {
+    top: 150%;
+  } */
+}

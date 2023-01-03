@@ -1,0 +1,66 @@
+<section class="contact_section" id="contact">
+  <div class="my_contact_heading">
+    <h1>Contact Me</h1>
+  </div>
+  <div class="contact_container">
+    <div class="contact_left_portion">
+      <h1>To Contact me, simply fill the form given below. To send me any
+        project ideas, specifications, email me at
+        <span>arunkatoch955@gmail.com</span></h1>
+      <div class="contact_me_div">
+        <form action="/contact" method="POST">
+          <label for="userName">
+            Name:
+          </label>
+          <input
+            type="text"
+            name="name"
+            id="userName"
+            value=""
+            placeholder="Enter your name"
+            required
+          />
+
+          <label for="userEmail">
+            Email:
+          </label>
+          <input
+            type="email"
+            name="email"
+            id="userEmail"
+            placeholder="Enter your Email"
+            required
+          />
+
+          <label for="userPhone">
+            Phone:
+          </label>
+          <input
+            type="text"
+            name="phone"
+            id="userPhone"
+            value=""
+            placeholder="Enter your Phone number"
+            required
+          />
+          <label for="userMsg">
+            Message:</label>
+          <input
+            type="text"
+            name="msg"
+            id="userMsg"
+            value=""
+            placeholder="Enter your message"
+          />
+          <button type="submit" value="submit" class="submit" onsubmit="submitForm()">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="contact_right_portion">
+      <figure>
+        <img src="Images/contact-us-animate.svg" alt="animated image" />
+      </figure>
+    </div>
+  </div>
+</section>

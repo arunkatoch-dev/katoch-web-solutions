@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Quiz</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+	overflow-x: hidden;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+#logo{
+    width: 100vw;
+    font-size: 2.5rem;
+    padding: 2rem;
+    font-weight: 450;
+    background-color: #9bceff;
+    color: white;
+}
+
+.main-div {
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: hsl(206, 92%, 94%);
+}
+
+.inner-div {
+    width: 55vw;
+    background-color: #fff;
+    padding: 3rem 8rem;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem -0.7rem rgba(0, 0, 0, 0.4);
+}
+
+.inner-div h2 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin: 1rem 0 4rem 0;
+}
+
+.inner-div li {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    list-style: none;
+}
+
+input {
+    cursor: pointer;
+}
+
+#submit,
+.btn {
+    padding: 1rem 3rem;
+    outline: none;
+    font-size: 2rem;
+    font-weight: 400;
+    display: block;
+    margin: 4rem auto;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #74b9ff;
+}
+
+#submit:hover {
+    background-color: #0984e3;
+}
+
+
+.for-unchecked{
+    font-size: 1.5rem;
+    color: red;
+    text-align: center;
+}
+
+#showScore {
+    background-color: #dfe6e9;
+    margin: 3rem 0 0 0;
+    padding: 3rem;
+    box-shadow: 0 1rem 1rem -0.7rem rgba(0, 0, 0, 0.4);
+}
+
+#showScore h3 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+
+#showScore .btn {
+    margin-top: 2rem;
+    background-color: #55efc4;
+    color: #2d3436;
+}
+
+#showScore .btn:hover {
+    background-color: #00b894;
+    color: #fff;
+}
+
+.scoreArea {
+    display: none;
+}
+
+footer{
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(206, 92%, 94%);
+  border-top: .1rem solid white;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+}
+footer p{
+ font-size: 2rem;
+ }
+
+@media(max-width:1015px) {
+    html {
+        font-size: 52.5%;
+    }
+}
+
+@media(max-width:700px) {
+    html {
+        font-size: 42.5%;
+    }
+    #showScore {
+        margin-top: 2rem;
+    }
+}
+@media(max-width:580px) {
+    .inner-div {
+        width: 75vw;
+    }    
+}
+@media(max-width:435px) {
+    .inner-div {
+        width: 85vw;
+    }
+    #showScore{
+        padding: 2rem;
+    }    
+    .inner-div h2 {
+        font-size: 3.5rem;
+        font-weight: 400;
+        margin: 1rem 0 4rem 0;
+    }
+}
+@media(max-width:335px) {  
+    html {
+        font-size: 36.5%;
+    }
+    .inner-div h2 {
+        font-size: 3.5rem;
+        font-weight: 400;
+        margin: 1rem 0 3rem 0;
+    }
+    .inner-div {
+        width: 90vw;
+    }
+footer p{
+ font-size: 2rem;
+ margin: .6rem 0;
+ }	
+}
+
+</style>
+</head>
+
+<body>
+<div id="logo">AK-Web Solution</div>
+    <div class="main-div">
+        <div class="inner-div">
+        <h2 class="question">Question Comes here</h2>
+        <ul>
+            <li>
+                <input type="radio" name="answer" id="ans1" class="answer">
+                 <label for="ans1" id="option1"> Answer option 1</label>
+            </li>
+            <li>
+                <input type="radio" name="answer" id="ans2" class="answer">
+                 <label for="ans2" id="option2"> Answer option 2</label>
+            </li>
+            <li>
+                <input type="radio" name="answer" id="ans3" class="answer">
+                 <label for="ans3" id="option3"> Answer option 3</label>
+            </li>
+            <li>
+                <input type="radio" name="answer" id="ans1" class="answer">
+                 <label for="ans4" id="option4"> Answer option 4</label>
+            </li>
+        </ul>
+
+        <button id="submit">Submit</button>
+		
+		<span class="for-unchecked"> If no option is selected then this will not count any point for that particular question.</span>
+
+        <div id="showScore" class="scoreArea">   </div>
+
+        </div>
+		<footer>
+	 <p>This quiz website is made by Arun Katoch on 30/07/2022</p>
+	 <p> Email: akinfo554@gmail.com </p>
+	 <p> &#169; All rights reserved.</p>
+	</footer>
+    </div>
+	
+ 
+    <script>
+const quizDB = [
+    {
+        question: `Q1: Who among the following was called "The Goddess of Silkworms"?'`,
+        a: "Si-Ling-Chi",
+        b: "Hoang-Li",
+        c: "Joseph Jacquard",
+        d: "L.Trouvelot",
+        ans: "ans1"
+    },
+    {
+        question: `Q2:Second largest silk-producing country is?'`,
+        a: "China",
+        b: "Japan",
+        c: "India",
+        d: "USSR",
+        ans: "ans3"
+    },
+    {
+        question: `Q3:Silk route was declared a World Heritage site by UNESCO in?'`,
+        a: "2011",
+        b: "2012",
+        c: "2013",
+        d: "2014",
+        ans: "ans4"
+    },
+    {
+        question: `Q4:Silkworm, which is largeswt silk producer, feeds on the leaves of?'`,
+        a: "Muga plant",
+        b: "Mulberry plant",
+        c: "Sal plant",
+        d: "Castor plant",
+        ans: "ans2"
+    },
+    {
+        question: `Q5:Muga silkworm is?'`,
+        a: "Univoltine",
+        b: "Bivoltine",
+        c: "Multivoltine",
+        d: "Polyvoltine",
+        ans: "ans3"
+    },
+    {
+        question: `Q6: Which type of metamorphosis is found in the life cycle of silk moth?'`,
+        a: "Hemimetaboly",
+        b: "Pauromataboly",
+        c: "Holometaboly",
+        d: "Ametaboly",
+        ans: "ans3"
+    },
+    {
+        question: `Q7: Silk moth belongs to order ........... of class Insecta?'`,
+        a: "Lepidoptera",
+        b: "Coleoptera",
+        c: "Dictyoptera",
+        d: "Orthoptera",
+        ans: "ans1"
+    },
+    {
+        question: `Q8: Eggs of silk moth are?'`,
+        a: "Microlecithal",
+        b: "Mesolecithal",
+        c: "Telolecithal",
+        d: "Centrolecithal",
+        ans: "ans4"
+    },
+    {
+        question: `Q9: Number of moultings found in the larval period of silk worm is?'`,
+        a: "Three",
+        b: "Four",
+        c: "Five",
+        d: "Six",
+        ans: "ans2"
+    },
+    {
+        question: `Q10: Which part of silk gland secretes fibroin protein?'`,
+        a: "Anterior region",
+        b: "Middle region",
+        c: "Posterior region",
+        d: "Filippi glands",
+        ans: "ans3"
+    },
+];
+
+const question = document.querySelector('.question');
+const option1 = document.querySelector('#option1');
+const option2 = document.querySelector('#option2');
+const option3 = document.querySelector('#option3');
+const option4 = document.querySelector('#option4');
+const submit = document.querySelector('#submit');
+const answers = document.querySelectorAll('.answer');
+const showScore = document.querySelector('#showScore');
+
+let questionCount = 0;
+let score = 0;
+
+const loadQuestion = () => {
+
+    const questionList = quizDB[questionCount];
+
+    question.innerText = questionList.question;
+
+    option1.innerText = questionList.a;
+    option2.innerText = questionList.b;
+    option3.innerText = questionList.c;
+    option4.innerText = questionList.d;
+
+
+}
+
+loadQuestion();
+
+const getCheckAnswer = () => {
+    let answer;
+    answers.forEach((curAnsElem) => {
+        if(curAnsElem.checked){
+            answer = curAnsElem.id;
+        }
+    });
+    return answer;
+};
+
+const deselectAll = () => {
+    answers.forEach((curAnsElem) => curAnsElem.checked = false);
+}
+
+submit.addEventListener('click', () => {
+    const checkedAnswer = getCheckAnswer();
+    console.log(checkedAnswer);
+
+    if(checkedAnswer == quizDB[questionCount].ans){
+        score++;
+    };
+
+    questionCount++;
+
+   deselectAll();
+
+    if(questionCount < quizDB.length){
+        loadQuestion();
+    }else{
+        showScore.innerHTML = `
+        <h3> Your Score ${score}/${quizDB.length}</h3>
+        <button class = "btn" onclick = "location.reload()"> Play Again </button>
+        `;
+        showScore.classList.remove('scoreArea');
+    }
+});
+
+
+</script>
+</body>
+</html>

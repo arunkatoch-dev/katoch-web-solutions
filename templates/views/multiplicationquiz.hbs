@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiplication quiz </title>
+  <style>
+    *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+   font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    text-align: center;
+    background:rgba(242, 178, 189, 0.77);
+
+}
+nav{
+    position: absolute;
+    top: 0;
+    text-align: center;
+    padding: 1rem;
+    height: 5rem;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.427);
+}
+ nav h2{
+    color: white;
+    font-size: 2rem;
+    letter-spacing: .7rem;
+ }
+
+#form{
+    padding: 3rem 5rem;
+    border: .1rem solid rgba(255, 255, 255, 0.672);
+    background: rgba(187, 255, 232, 0.648);
+    box-shadow: .2rem .4rem .5rem rgba(0,0,0,0.3);
+    border-radius: .8rem;
+}
+
+.score{
+    text-align: right;
+    /* border: 1px solid red; */
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    padding: 2rem 0;
+    color: rgba(231, 97, 97, 0.897);
+}
+
+#question{
+    font-size: 1.8rem;
+    color:rgba(32, 29, 29, 0.934);
+}
+
+.input{
+    display: block;
+    width: 100%;
+    font-size: 2rem;
+    padding: 1rem 5.5rem;
+    margin: 2rem 0;
+    text-align: center;
+    border-radius: .5rem;
+    color:rgba(32, 29, 29, 0.934);
+    border: none;
+    outline: none;
+    outline: .1rem solid rgba(235, 87, 87, 0.803);
+   
+}
+.input:hover{
+    outline: .2rem solid rgba(253, 114, 114, 0.803);
+
+}
+
+.input::placeholder{
+    color: rgb(140, 129, 129);
+}
+
+.btn{
+    padding: 1rem 2rem;
+    font-size: 1.7rem;
+    background-color: rgba(235, 87, 87, 0.803);
+    color: white;
+    border: none;
+    letter-spacing: .1rem;
+    cursor: pointer;
+    border-radius: .5rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.btn:hover{
+    background-color: rgb(235, 87, 87);
+    box-shadow: .2rem .4rem .5rem rgba(0,0,0,0.5);
+}
+
+footer{
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.427);
+    border-top: .1rem solid rgba(255, 255, 255, 0.066);
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+  }
+  footer p{
+   font-size: 1.5rem;
+   color: white;
+   }
+  
+   @media(max-width: 475px){
+    html{
+      font-size: 52.4%;
+    }
+  }
+
+  @media(max-width:376px){
+    html{
+      font-size: 42.4%;
+    }
+  }
+  </style>
+</head>
+
+<body>
+    <nav>
+        <h2>Ak - Web Solutions</h2>
+    </nav>
+
+    <form class="form" id="form">
+     <h4 class="score" id="score">score: 0</h4>
+     <h1 id="question">What is 1 multiply by 1?</h1>
+     <input type="text" class="input" id="input" placeholder="Enter your answer" autofocus autocomplete="off" required>
+     <button type="submit" class="btn">Submit</button>
+    </form>
+
+    <footer>
+        <p>This multiplication quiz website is made by Arun Katoch on 10/08/2022</p>
+        <p> Email: akinfo554@gmail.com </p>
+        <p> &#169; All rights reserved.</p>
+       </footer>
+
+    <script>
+        const num1 = Math.ceil(Math.random()*25);
+const num2 = Math.ceil(Math.random()*10);
+
+const scoreEl = document.getElementById("score");
+let score =  JSON.parse(localStorage.getItem("score"));
+
+if(!score){
+   score = 0;
+}
+
+scoreEl.innerText = `Score: ${score}`
+const questionEl = document.getElementById("question");
+const inputEl = document.getElementById("input")
+
+questionEl.innerText = `What is ${num1} multiply by ${num2}`;
+
+const correctAns = num1 * num2;
+
+const formEl = document.getElementById("form")
+
+formEl.addEventListener("submit", ()=> {
+ const userAns = +inputEl.value
+ if(userAns == correctAns){
+    score++
+    updateLocalStorage(); 
+ }else{
+    score--
+    updateLocalStorage();
+ }
+})
+
+function updateLocalStorage(){
+    localStorage.setItem("score", JSON.stringify(score));
+}
+
+    </script>
+</body>
+</html>

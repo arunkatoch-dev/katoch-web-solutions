@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+html {
+    font-size: 56.5%;
+    color: #24305f;
+}
+
+body {
+    background: #fffbfb;
+}
+
+.accordion {
+    width: 50%;
+    margin: 20rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.item {
+    box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 3.3rem;
+    align-items: center;
+    padding: 3rem;
+    cursor: pointer;
+    border-radius: .5rem;
+    /* border: 1px solid black; */
+}
+
+h2 {
+    font-size: 2.4rem;
+    text-transform: capitalize;
+}
+
+.number {
+    font-size: 3.2rem;
+}
+
+
+.icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    color: #1864ab;
+}
+
+.hidden-box {
+    grid-column: 2/3;
+    display: none;
+
+}
+
+.hidden-box p {
+    line-height: 1.6;
+    margin-bottom: 2.4rem;
+    font-size: 2rem;
+    letter-spacing: .05rem;
+}
+
+.hidden-box ul {
+    display: flex;
+    gap: 2.4rem;
+    flex-direction: column;
+}
+
+.hidden-box ul li {
+    margin-left: 1.6rem;
+    line-height: 1.5;
+    font-size: 2rem;
+    letter-spacing: .05rem;
+    word-spacing: .3rem;
+}
+
+.active {
+    position: relative;
+}
+
+.active::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    border-top: .3rem solid #1864ab;
+    animation: borderline 1s linear forwards;
+}
+
+@keyframes borderline{
+    0%{
+        width:0;
+    }
+    100%{
+        width:100%;
+    }
+}
+
+.active .hidden-box {
+    display: block;
+}
+
+@media(max-width: 844px) {
+    html {
+        font-size: 40.5%;
+    }
+
+    .accordion {
+        width: 70%;
+        margin: 25rem auto;
+        gap: 5rem;
+    }
+}
+
+@media(max-width: 310px) {
+    html {
+        font-size: 40.5%;
+    }
+
+    .accordion {
+        width: 85%;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- ************************************************************************************** -->
+
+    <div class="accordion">
+        <div class="item">
+            <p class="number">01</p>
+            <h2>My name is Arun Katoch</h2>
+
+            <div class="iconOpen">
+                 <ion-icon name="add-outline" class="icon"></ion-icon>
+            </div>  
+
+            <div class="iconClose">
+                <ion-icon name="close-outline" class="icon"></ion-icon>
+            </div>
+        <div class="hidden-box">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores odit enim velit beatae quasi asperiores ratione, iure harum, blanditiis aspernatur at labore. Ipsam, praesentium error.</p>
+            <ul>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.  </li>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.  </li>
+            </ul>
+        </div>
+    </div>
+
+<!-- ************************************************************************************** -->
+
+        <div class="item">
+            <p class="number">02</p>
+            <h2>I am From Kasauli</h2>
+
+            <div class="iconOpen">
+                 <ion-icon name="add-outline" class="icon"></ion-icon>
+            </div>  
+
+            <div class="iconClose">
+                <ion-icon name="close-outline" class="icon"></ion-icon>
+            </div>
+        <div class="hidden-box">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores odit enim velit beatae quasi asperiores ratione, iure harum, blanditiis aspernatur at labore. Ipsam, praesentium error.</p>
+            <ul>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.  </li>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.  </li>
+            </ul>
+        </div>
+<!-- ************************************************************************************** -->
+        </div>
+
+        <div class="item">
+            <p class="number">03</p>
+            <h2>I am Graduate in Zoology.</h2>
+
+            <div class="iconOpen">
+                 <ion-icon name="add-outline" class="icon"></ion-icon>
+            </div>  
+
+            <div class="iconClose">
+                <ion-icon name="close-outline" class="icon"></ion-icon>
+            </div>
+        <div class="hidden-box">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores odit enim velit beatae quasi asperiores ratione, iure harum, blanditiis aspernatur at labore. Ipsam, praesentium error.</p>
+            <ul>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.  </li>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.  </li>
+            </ul>
+        </div>
+<!-- ************************************************************************************** -->
+        </div>
+
+    </div>
+
+<script>
+let ourItemDiv = document.getElementsByClassName('item');
+let openIcon = document.getElementsByClassName('iconOpen');
+let closeIcon = document.getElementsByClassName('iconClose');
+
+for(let i = 0; i < ourItemDiv.length; i++){
+
+    closeIcon[i].style.display = "none";
+
+    ourItemDiv[i].addEventListener("click", () => {
+     const result =  ourItemDiv[i].classList.toggle("active");
+
+     if(result){
+        closeIcon[i].style.display = "block";
+        openIcon[i].style.display ="none";
+         }else{
+            closeIcon[i].style.display = "none";
+            openIcon[i].style.display ="block";
+         }
+    });
+}
+console.log(ourItemDiv);
+</script>
+            
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

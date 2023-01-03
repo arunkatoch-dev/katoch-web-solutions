@@ -1,0 +1,736 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Raleway&family=Satisfy&family=Tajawal&display=swap");
+
+* {
+  box-sizing: border-box;
+  list-style-type: none;
+  font-family: Raleway, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+:root {
+  --primary_Color: #ffb6b9;
+  --secondary_Color: #fae3d9;
+  --primary_Black: rgb(68, 68, 68);
+  --secondary_Black: rgb(31, 31, 31);
+  --primary_text: #46525f;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  position: relative;
+  width: 100%;
+}
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary_Color);
+  padding: 0.5rem 0px;
+}
+header nav .logo {
+  padding: 1rem;
+}
+header nav .logo h1 {
+  font-family: Satisfy, cursive;
+  font-size: 2.2rem;
+  letter-spacing: 0.2rem;
+  color: rgb(255, 255, 255);
+}
+header nav .big_devices_ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+header nav .big_devices_ul :last-child {
+  margin-right: 1rem;
+}
+header nav .big_devices_ul li a {
+  font-size: 1.8rem;
+  color: var(--primary_text);
+  font-family: "Balsamiq Sans", cursive;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  padding: 0.5rem 0px;
+}
+header nav .big_devices_ul li a:hover {
+  color: rgb(255, 255, 255);
+}
+header nav #menu_btn {
+  margin-right: 1rem;
+  cursor: pointer;
+  display: none;
+}
+
+body header .small_devices_navbar {
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--secondary_Color);
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+}
+body header .mobnav {
+  display: flex;
+}
+
+header .small_devices_navbar .small_devices_ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+header .small_devices_navbar .small_devices_ul li {
+  margin: 0.5rem 0px;
+}
+header .small_devices_navbar .small_devices_ul li a {
+  font-size: 1.8rem;
+  color: var(--primary_Black);
+  font-weight: 500;
+  font-family: "Balsamiq Sans", cursive;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+}
+
+/* Main Section Starts from here -------------->>>>>>>>>>  */
+main {
+  width: 100%;
+}
+main .top_section {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .top_section .left_portion,
+main .contact_section .contact_left_portion {
+  width: 55%;
+  min-height: 60%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 8rem 0px;
+}
+main .top_section .left_portion h1,
+main .top_section .left_portion span,
+main .top_section .left_portion h2 {
+  font-size: 3rem;
+  text-align: left;
+  letter-spacing: 0.1rem;
+  color: rgb(70, 82, 95);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Raleway, sans-serif;
+}
+
+main .top_section .left_portion span {
+  text-align: left;
+  color: rgba(91, 106, 122, 0.776);
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin: 2rem 8rem 2rem 0px;
+}
+main .top_section .left_portion h2 {
+  text-align: left;
+  color: rgb(255, 184, 154);
+  font-size: 2.3em;
+  text-transform: capitalize;
+  font-family: Satisfy, cursive;
+  margin: 0px 8rem 0px 0px;
+}
+main .top_section .left_portion .read_more,
+main .contact_section .contact_left_portion .contact_me_div form .submit {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-family: Raleway, sans-serif;
+  width: 17rem;
+  text-align: center;
+  background-color: rgb(70, 82, 95);
+  color: white;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  margin: 3rem 0px;
+  border-radius: 0.5rem;
+}
+
+main .top_section .left_portion .read_more:hover,
+main .services_section .my_services .services:hover,
+main .contact_section .contact_left_portion .contact_me_div form .submit:hover,
+main .projects_section .projects_container .projects:hover,
+main
+  .bottom_section
+  .bottom_container
+  .social_links_container
+  .social_links
+  a:hover,
+main .bottom_section .bottom_container .social_links_container #up_arrow:hover {
+  box-shadow: 0.2rem 0.2rem 1rem 0.3rem rgba(0, 0, 0, 0.375);
+  transition: 0.2s;
+}
+main .top_section .right_portion,
+main .contact_section .contact_right_portion {
+  width: 37%;
+}
+main .top_section .right_portion figure,
+main .contact_section .contact_right_portion figure {
+  width: 100%;
+}
+
+/* About Section Starts from here -------------->>>>>>>>>>  */
+main .about_section,
+main .contact_section,
+main .projects_section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+main .services_section .my_services_heading,
+main .contact_section .my_contact_heading,
+main .about_section .my_about_heading,
+main .projects_section .my_projects_heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 4rem;
+  margin: 0px auto;
+  border-bottom: 0.1rem solid rgb(28, 44, 92);
+}
+main .services_section .my_services_heading h1,
+main .contact_section .my_contact_heading h1,
+main .about_section .my_about_heading h1,
+main .projects_section .my_projects_heading h1 {
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  color: rgb(28, 44, 92);
+  text-align: center;
+}
+main .about_section .about_container,
+main .contact_section .contact_container,
+main .projects_section .projects_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 3rem 0px;
+}
+
+main .about_section .about_container .about_left_portion {
+  width: 37%;
+}
+main .about_section .about_container .about_left_portion figure {
+  width: 100%;
+}
+main .about_section .about_container .about_right_portion {
+  width: 55%;
+  min-height: 65%;
+}
+main .about_section .about_container .about_right_portion p {
+  font-size: 2rem;
+  text-align: left;
+  text-transform: capitalize;
+  font-family: Satisfy, cursive;
+  letter-spacing: 0.2rem;
+  color: var(--primary_text);
+  margin: 7rem 2rem;
+}
+main .about_section .about_container .about_right_portion p span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: Satisfy, cursive;
+  letter-spacing: 0.1rem;
+  color: rgb(255, 184, 154);
+  text-decoration: underline;
+}
+main .about_section .about_container .about_right_portion ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  list-style: none;
+  padding: 1rem 0px 6rem 3rem;
+}
+main .about_section .about_container .about_right_portion ul li {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(167, 167, 167);
+  font-family: Satisfy, cursive;
+  margin: 0px 1rem;
+  gap: 1rem;
+}
+.about_right_portion ul li::before {
+  content: "•";
+  display: inline-block;
+  font-weight: bold;
+  width: 1rem;
+  color: rgb(167, 167, 167);
+  margin-left: -1rem;
+}
+main .about_section .about_container .about_right_portion ul li figure {
+  width: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .about_section .about_container .about_right_portion .about_more {
+  font-size: 1.8rem;
+  display: inline-block;
+  text-align: left;
+  text-transform: capitalize;
+  font-family: Satisfy, cursive;
+  letter-spacing: 0.2rem;
+  color: var(--primary_text);
+  margin: 1rem 2rem;
+}
+
+/* Services Section Starts from here -------------->>>>>>>>>>  */
+main .services_section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+}
+main .services_section .my_services {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem auto;
+  border-radius: 1rem;
+}
+main .services_section .my_services .services {
+  width: 30%;
+  box-shadow: rgba(0, 0, 0, 0.32) 0.1rem 0.1rem 0.1rem 0.2rem;
+  text-align: center;
+  background-color: rgba(237, 237, 237, 0.52);
+  cursor: pointer;
+  margin: 1rem;
+  border-radius: 1rem;
+  padding: 3rem 4rem;
+}
+main .services_section .my_services .services figure {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .services_section .my_services .services span {
+  display: inline-block;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  font-family: Raleway, sans-serif;
+  color: rgb(86, 86, 86);
+  margin: 4rem;
+}
+
+/* Contact Section Starts from here -------------->>>>>>>>>>  */
+main .contact_section .contact_left_portion h1 {
+  color: rgb(28, 44, 92);
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  padding: 0px 2rem;
+}
+main .contact_section .contact_left_portion .contact_me_div {
+  width: 100%;
+}
+main .contact_section .contact_left_portion .contact_me_div form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+main .contact_section .contact_left_portion .contact_me_div form label {
+  font-size: 2rem;
+  color: rgb(28, 44, 92);
+  margin: 0.5rem 0px;
+}
+
+main .contact_section .contact_left_portion .contact_me_div form input {
+  width: 75%;
+  height: 3rem;
+  color: rgb(28, 44, 92);
+  padding: 2rem;
+  margin: 0.5rem 0px;
+}
+main .contact_section .contact_left_portion .contact_me_div form .submit {
+  background-color: var(--primary_Color);
+  color: rgb(58, 38, 43);
+  margin: 2rem 0px 2rem 36rem;
+  border: none;
+}
+
+/* Projects Section Starts from here -------------->>>>>>>>>>  */
+main .projects_section .projects_container .projects {
+  width: 25rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(237, 237, 237, 0.52);
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.27) 0.1rem 0.1rem 0.5rem;
+  border-radius: 1rem;
+  margin: 2rem;
+}
+main .projects_section .projects_container .projects a img {
+  width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom: 0.1rem solid rgb(143, 143, 143);
+}
+main .projects_section .projects_container .projects a h2 {
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  font-family: Raleway, sans-serif;
+  color: var(--primary_text);
+  text-align: center;
+  margin: 2rem 0px 1rem;
+}
+main .projects_section .projects_container .projects a p {
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  font-family: Raleway, sans-serif;
+  color: rgb(99, 99, 99);
+  text-align: left;
+  padding: 2rem 0px 1rem 1rem;
+}
+
+/* Bottom Section Starts from here -------------->>>>>>>>>>  */
+main .bottom_section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgb(237, 140, 161);
+  padding: 5rem 4rem 15rem;
+}
+main .bottom_section .logo h1 {
+  font-family: Satisfy, cursive;
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+  color: white;
+}
+main .bottom_section .bottom_container {
+  width: 100%;
+  display: flex;
+}
+main .bottom_section .bottom_container .bottom_details {
+  width: 75%;
+  display: flex;
+}
+main .bottom_section .bottom_container .bottom_details .bottom_rows {
+  padding: 1.5rem 5rem;
+}
+main .bottom_section .bottom_container .bottom_details .bottom_rows span {
+  display: inline-block;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: var(--primary_text);
+  letter-spacing: 0.1rem;
+  border-bottom: 0.1rem solid var(--primary_text);
+  padding: 1rem 0px;
+  margin: 2rem 0px;
+}
+main .bottom_section .bottom_container .bottom_details .bottom_rows ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main
+  .bottom_section
+  .bottom_container
+  .bottom_details
+  .bottom_rows
+  ul
+  li::before {
+  content: "•";
+  display: inline-block;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: rgb(91, 49, 49);
+  margin-left: -1rem;
+}
+main .bottom_section .bottom_container .bottom_details .bottom_rows ul li a {
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: rgb(91, 49, 49);
+  text-transform: lowercase;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+}
+main .bottom_section .bottom_container .social_links_container {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+main .bottom_section .bottom_container .social_links_container span {
+  font-size: 2rem;
+  color: white;
+  text-align: right;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+}
+main .bottom_section .bottom_container .social_links_container .social_links {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  gap: 1rem;
+  padding: 2rem 0px;
+  border-bottom: 0.1rem solid white;
+}
+
+main .bottom_section .bottom_container .social_links_container #up_arrow {
+  position: absolute;
+  bottom: 3%;
+  right: 1%;
+}
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(47, 47, 79);
+  position: absolute;
+  bottom: 0px;
+  padding: 0.5rem 0px;
+}
+footer span,
+footer p {
+  font-size: 1.3rem;
+  color: white;
+  letter-spacing: 0.1rem;
+  margin: 0.3rem 0px;
+}
+
+/* Media Queries ------------------------------------>>>>>> */
+@media (max-width: 1051px) {
+  html {
+    font-size: 58.2%;
+  }
+  main .bottom_section .bottom_container .bottom_details .bottom_rows {
+    padding: 1.5rem 3rem;
+  }
+  main .bottom_section .bottom_container .social_links_container .social_links {
+    gap: 0.3rem;
+  }
+  main
+    .bottom_section
+    .bottom_container
+    .social_links_container
+    .social_links
+    a
+    img {
+    width: 3.5rem;
+  }
+}
+
+@media (max-width: 815px) {
+  html {
+    font-size: 50.2%;
+  }
+  main .top_section {
+    height: 80vh;
+  }
+  main .contact_section {
+    height: 100vh;
+    justify-content: center;
+  }
+  main .contact_section .contact_left_portion .contact_me_div form label,
+  main .contact_section .contact_left_portion .contact_me_div form input {
+    margin: 1rem 0px;
+  }
+}
+
+@media (max-width: 700px) {
+  header nav .big_devices_ul {
+    display: none;
+  }
+  header nav #menu_btn {
+    display: block;
+  }
+  main .about_section {
+    width: 92%;
+  }
+  main .about_section .about_container {
+    flex-direction: column;
+  }
+  main .about_section .about_container,
+  main .contact_section .contact_container,
+  main .projects_section .projects_container {
+    padding: 1rem 0px;
+  }
+  main .about_section .my_about_heading,
+  main .projects_section .my_projects_heading {
+    margin: 2rem auto;
+  }
+  main .about_section .about_container .about_left_portion,
+  main .about_section .about_container .about_right_portion {
+    width: 100%;
+  }
+  main .about_section .about_container .about_right_portion p,
+  main .about_section .about_container .about_right_portion .about_more {
+    text-align: center;
+  }
+  main .about_section .about_container .about_right_portion ul {
+    align-items: center;
+    justify-content: center;
+  }
+  main .services_section .my_services .services {
+    padding: 3rem 0rem;
+  }
+  main .contact_section .contact_left_portion .contact_me_div form .submit {
+    margin: 2rem 0px 0px 11rem;
+  }
+  main .about_section .my_about_heading,
+  main .projects_section .my_projects_heading {
+    margin: 2rem auto;
+  }
+  main .projects_section .projects_container .projects {
+    width: 30rem;
+    margin: 1.5rem;
+  }
+  main .bottom_section {
+    padding: 5rem 1rem 15rem;
+  }
+  main .bottom_section .bottom_container .bottom_details .bottom_rows {
+    padding: 1.5rem 3rem;
+  }
+  main .bottom_section .bottom_container .bottom_details .bottom_rows span {
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  main .bottom_section {
+    padding: 5rem 1rem 8rem;
+  }
+  main .bottom_section .bottom_container {
+    width: 100%;
+    flex-direction: column;
+  }
+  main .bottom_section .bottom_container .bottom_details {
+    width: 100%;
+  }
+  main .bottom_section .bottom_container .social_links_container {
+    width: 100%;
+    height: 20rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: right;
+    position: relative;
+    /* border-bottom: 0.1rem solid white; */
+  }
+  main .bottom_section .bottom_container .social_links_container .social_links {
+    display: flex;
+    justify-content: right;
+    gap: 1rem;
+    padding: 2rem 0px;
+    margin: 0px auto;
+  }
+  .social_links a img {
+    width: 1rem;
+  }
+
+  main .bottom_section .bottom_container .social_links_container #up_arrow {
+    position: absolute;
+    bottom: 10%;
+    right: 1%;
+  }
+}
+
+@media (max-width: 535px) {
+  main .top_section {
+    flex-direction: column;
+    display: flex;
+    height: 80vh;
+    position: relative;
+  }
+  main .top_section .left_portion {
+    width: 100%;
+    min-height: 0px;
+    position: absolute;
+    bottom: 0px;
+    align-items: center;
+    justify-content: center;
+  }
+  main .top_section .left_portion h1 {
+    text-align: center;
+    font-size: 2.2rem;
+  }
+  main .top_section .left_portion span {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin: 2rem 1rem 2rem 0px;
+  }
+  main .top_section .left_portion h2 {
+    text-align: center;
+    margin: 0px;
+  }
+  main .top_section .left_portion .read_more {
+    margin: 5rem 0px 0px;
+  }
+  main .top_section .right_portion {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+  }
+  main .about_section {
+    width: 100%;
+  }
+  main .services_section .my_services .services {
+    width: 90%;
+  }
+  main .contact_section {
+    height: 90vh;
+  }
+  main .contact_section .contact_left_portion {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  main .contact_section .contact_left_portion .contact_me_div form .submit {
+    margin: 3rem auto;
+  }
+  main .contact_section .contact_right_portion {
+    display: none;
+  }
+  main .projects_section .projects_container .projects {
+    width: 90%;
+    height: 35rem;
+    margin: 1rem;
+  }
+  main .bottom_section .bottom_container .bottom_details .bottom_rows {
+    padding: 1.5rem 0.5rem;
+  }
+}
