@@ -47,35 +47,12 @@ app.post("/contact", async (req, res) => {
 app.get("/services", (req, res) => {
   res.render("services");
 });
-app.get("/multiplicationquiz", (req, res) => {
-  res.render("multiplicationquiz");
-});
 app.get("/sciencequiz", (req, res) => {
   res.render("sciencequiz");
 });
-app.get("/digitalclock", (req, res) => {
-  res.render("digitalclock");
-});
-app.get("/basicaccordion", (req, res) => {
-  res.render("basicaccordion");
-});
-app.get("/template1", (req, res) => {
-  res.render("template1");
-});
-app.get("/template2", (req, res) => {
-  res.render("template2");
-});
-app.get("/food_website_template", (req, res) => {
-  res.render("foodwebsite");
-});
-app.get("/gymTemplate", (req, res) => {
-  res.render("gymTemplate");
-});
-
 app.get("/pageunderconstruction", (req, res) => {
   res.status(404).render("construction_page");
 });
-
 app.get("*", (req, res) => {
   res.status(404).render("404_error_page");
 });

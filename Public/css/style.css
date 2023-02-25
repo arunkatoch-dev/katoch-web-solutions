@@ -171,7 +171,6 @@ main .contact_section .contact_left_portion .contact_me_div form .submit {
 main .top_section .left_portion .read_more:hover,
 main .services_section .my_services .services:hover,
 main .contact_section .contact_left_portion .contact_me_div form .submit:hover,
-main .projects_section .projects_container .projects:hover,
 main
   .bottom_section
   .bottom_container
@@ -391,10 +390,15 @@ main .projects_section .projects_container .projects {
   display: flex;
   flex-direction: column;
   background-color: rgba(237, 237, 237, 0.52);
-  cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.27) 0.1rem 0.1rem 0.5rem;
+  box-shadow: 0.1rem 0.1rem 1rem rgb(105, 105, 105);
   border-radius: 1rem;
   margin: 2rem;
+  transition: transform 0.2s;
+}
+main .projects_section .projects_container .projects:hover {
+  transform: scale(1.05);
+  box-shadow: 0.1rem 0.1rem 1rem rgb(61, 61, 61);
+  cursor: pointer;
 }
 main .projects_section .projects_container .projects img {
   width: 100%;
@@ -733,4 +737,28 @@ footer p {
   main .bottom_section .bottom_container .bottom_details .bottom_rows {
     padding: 1.5rem 0.5rem;
   }
+}
+
+/* Scrollbar customization  */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(155, 155, 155);
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6f6f6f;
+  cursor: pointer;
 }
