@@ -30,9 +30,9 @@ hbs.registerPartials(partials_Path);
 app.get("/", (req, res) => {
   res.render("index");
 });
-app.get("/about", (req, res) => {
-  res.render("about");
-});
+// app.get("/about", (req, res) => {
+//   res.render("about");
+// });
 
 app.post("/contact", async (req, res) => {
   try {
@@ -44,14 +44,17 @@ app.post("/contact", async (req, res) => {
   }
 });
 
-app.get("/services", (req, res) => {
-  res.render("services");
-});
+// app.get("/services", (req, res) => {
+//   res.render("services");
+// });
 app.get("/sciencequiz", (req, res) => {
   res.render("sciencequiz");
 });
 app.get("/pageunderconstruction", (req, res) => {
   res.status(404).render("construction_page");
+});
+app.get("/read_more", (req, res) => {
+  res.status(404).render("read_more");
 });
 app.get("*", (req, res) => {
   res.status(404).render("404_error_page");
